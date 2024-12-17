@@ -1,0 +1,55 @@
+  
+  /* Text animation on scroll */
+  .app__desc-content{
+    color: black;
+  }
+  .content-text{
+    overflow: hidden;
+    line-height: 2;
+    
+  }
+  .content-text span{
+    display: inline-block;
+    transform: translateY(100%);
+
+  }
+
+  .content-seeMore {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .content-seeMore:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  /* .remove-text{
+
+
+
+    animation: text-hide .4s ease;
+  }
+  
+  @keyframes text-hide{
+
+    to {
+      opacity: 0;
+    }
+  } */
+
+  /* .show-more{
+    scale: 12;
+    transition: 1s ease-in-out;
+  } */
+  .initial-bg {
+    background-color: "#0000000";
+    transition: background 0.3s ease;
+  }
+  
+  .new-bg {
+    background-color: "#FF6F61";
+    transition: background 0.3s ease;
+  }
+  
+
+  
