@@ -95,7 +95,7 @@ const Introduction = ({ setShowMenu, showMenu }) => {
   return (
     <>
       <section className="py-16 bg-primary">
-        <div className="flex justify-between w-full p-6 bg-primary sm:p-8 ">
+        <div className="flex flex-col justify-between w-full gap-4 p-6 md:flex-row bg-primary sm:p-8 ">
           <p className="w-3/4 font-sans text-xl md:text-2xl xl:text-3xl lg:w-1/2 ">
             RapidPay est une application mobile innovante qui simplifie les
             réservations de voyages au Gabon, ciblant à la fois les voyageurs
@@ -112,22 +112,22 @@ const Introduction = ({ setShowMenu, showMenu }) => {
             parties prenantes.
           </p>
 
-          <div className="w-[300px] h-[300px]">
+          <div className="w-[150px] md:w-[300px] ">
             <img src={images.img3} alt="" />
           </div>
         </div>
 
+{/* Demo */}
         <div
           id="demo"
-          className="flex flex-col items-center justify-center w-full gap-16 mt-28 "
+          className="flex flex-col items-center justify-center w-full gap-16 mfb-16 mt-28 "
         >
           <PageTitle title="Demo" />
-          <div className="expanding-div flex justify-center items-center h-[50vh] md:h-[90vh] bg-basic">
+          <div className="flex items-center justify-center h-auto expanding-div bg-basic">
             <div className="w-[300px] h-auto bg-sky-800 ">
               <video
                 ref={videoRef}
                 className="object-cover w-[300px] h-auto"
-              
                 muted
                 controls
                 loop
@@ -148,8 +148,8 @@ const Introduction = ({ setShowMenu, showMenu }) => {
           </div>
         </div>
 
-        <div className="flex justify-between w-full h-auto p-6 my-20 bg-primary sm:p-8 ">
-          <p className="w-3/4 font-sans text-xl md:text-2xl xl:text-3xl lg:w-1/2 ">
+        <div className="flex flex-col justify-between w-full h-auto gap-16 p-6 my-20 md:flex-row bg-primary sm:p-8 ">
+          <p className="w-full font-sans text-xl md:text-2xl xl:text-3xl lg:w-1/2 ">
             Notre collaboration avec les agences de transport locales et les
             hôtels partenaires nous permet d'offrir des services efficaces qui
             répondent aux besoins de nos clients.
@@ -162,7 +162,7 @@ const Introduction = ({ setShowMenu, showMenu }) => {
             </span>
           </p>
 
-          <div className="w-[40%] ">
+          <div className="md:w-[40%] w-[80%] mt-16 md:mt-0">
             <img src={images.img4} alt="" />
           </div>
         </div>
@@ -177,13 +177,9 @@ const Introduction = ({ setShowMenu, showMenu }) => {
               réservations depuis
             </h2>
 
-            {/* <div className="absolute top-1/2 transform rounded-xl -translate-y-1/2  left-[100%] w-[150px] h-[85px] md:w-[300px] md:h-[170px] bg-gradient-to-r from-green-500 to-blue-500"> */}
-            {/* <div className="absolute top-1/2 left-[50%] transform -translate-x-1/2 -translate-y-1/2 rounded-xl bg-gradient-to-r from-green-500 to-blue-500 w-[150px] h-[85px] md:w-[300px] md:h-[170px]"> */}
             <div className="absolute top-1/2 transform rounded-xl -translate-y-1/2  left-[100%] w-[150px] h-[85px] md:w-[300px] md:h-[170px] bg-gradient-to-r from-green-500 to-blue-500">
-            <img className="w-full h-[100%]" src={images.img4} alt="" />
+              <img className="w-full h-[100%]" src={images.img4} alt="" />
             </div>
-
-            {/* </div> */}
           </div>
           <h2 className="text-3xl font-bold md:text-6xl lg:text-8xl font-fontAlt h2-3">
             chez vous
