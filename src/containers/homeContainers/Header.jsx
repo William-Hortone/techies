@@ -5,11 +5,10 @@ const Header = ({setShowMenu,showMenu}) => {
   
   return (
     <>
-      <header className="relative z-10 w-screen h-screen bg-primary ">
+      <header id="home" className="relative z-10 w-screen h-screen bg-primary ">
         <Infos />
         <NavBtn setShowMenu={setShowMenu} />
         <NavBar setShowMenu={setShowMenu} showMenu={showMenu} />
-        {/* Logo */}
        
          
 

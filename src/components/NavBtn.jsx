@@ -15,10 +15,10 @@ const NavBtn = ({setShowMenu}) => {
          
             >
               <p className="whitespace-nowrap " style={{ color: "white" }}>
-                RapidPay
+                WAN TECH
               </p>
               <p className="whitespace-nowrap " style={{ color: "white" }}>
-                RapidPay
+                WAN TECH
               </p>
             </div>
           </button>
@@ -40,7 +40,7 @@ const NavBtn = ({setShowMenu}) => {
                 color="black"
                 className="hidden transition-all duration-300 ease-in-out group-hover:block"
               />
-              <div className="w-auto h-[100%] bg-green-500 justify-self-end self-end">
+              <div className="w-auto h-[100%] justify-self-end self-end">
                 <p style={{ color: "white" }}>Menu</p>
                 <p style={{ color: "white" }}>Menu </p>
               </div>

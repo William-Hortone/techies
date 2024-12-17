@@ -1,13 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PageTitle } from "../../components";
 import images from "../../constants/images";
-import video1 from "../../assets/video1.mp4";
+import demo from "../../assets/demo.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Introduction = ({ setShowMenu, showMenu }) => {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
   useEffect(() => {
     const divAnimation = gsap.context(() => {
       gsap.fromTo(
@@ -78,9 +81,20 @@ const Introduction = ({ setShowMenu, showMenu }) => {
 
     return () => divAnimation.revert();
   }, []);
+
+  const handlePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
   return (
     <>
-      <section className="bg-primary">
+      <section className="py-16 bg-primary">
         <div className="flex justify-between w-full p-6 bg-primary sm:p-8 ">
           <p className="w-3/4 font-sans text-xl md:text-2xl xl:text-3xl lg:w-1/2 ">
             RapidPay est une application mobile innovante qui simplifie les
@@ -103,21 +117,34 @@ const Introduction = ({ setShowMenu, showMenu }) => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-full gap-16 mt-28 ">
+        <div
+          id="demo"
+          className="flex flex-col items-center justify-center w-full gap-16 mt-28 "
+        >
           <PageTitle title="Demo" />
-          <div className="expanding-div h-[50vh] md:h-[90vh] bg-basic">
-            {/* <div className="w-full min-h-[100%] md:w-1/4 bg-sky-800 "> */}
-            <video
-              className="object-cover w-full h-full"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src="" type="video/mp4" />
-              Your browser does not support the video
-            </video>
-            {/* </div> */}
+          <div className="expanding-div flex justify-center items-center h-[50vh] md:h-[90vh] bg-basic">
+            <div className="w-[300px] h-auto bg-sky-800 ">
+              <video
+                ref={videoRef}
+                className="object-cover w-[300px] h-auto"
+              
+                muted
+                controls
+                loop
+                playsInline
+              >
+                <source src={demo} type="video/mp4" />
+                Your browser does not support the video
+              </video>
+            </div>
+            <div className="flex justify-center mt-4">
+              <button
+                className="px-4 py-2 text-white transition bg-blue-500 rounded-md hover:bg-blue-700"
+                onClick={handlePlayPause}
+              >
+                {isPlaying ? "Pause" : "Play"}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -128,13 +155,14 @@ const Introduction = ({ setShowMenu, showMenu }) => {
             répondent aux besoins de nos clients.
             <br /> <br />
             <span className="font-bold ">
-            Il est à noter que la version bêta de notre application est déjà
-            disponible sur Google Play Store. Toutefois, elle est en test fermé,
-            et à ce jour, nous avons déjà deux partenaires qui sont prêts à nous
-            accompagner dès le lancement de notre application.
-            </span></p>
+              Il est à noter que la version bêta de notre application est déjà
+              disponible sur Google Play Store. Toutefois, elle est en test
+              fermé, et à ce jour, nous avons déjà deux partenaires qui sont
+              prêts à nous accompagner dès le lancement de notre application.
+            </span>
+          </p>
 
-          <div className="w-[300px]  ">
+          <div className="w-[40%] ">
             <img src={images.img4} alt="" />
           </div>
         </div>
@@ -146,23 +174,19 @@ const Introduction = ({ setShowMenu, showMenu }) => {
           </h2>
           <div className="relative h2-2">
             <h2 className="text-3xl font-bold md:text-6xl lg:text-8xl font-fontAlt ">
-          réservations depuis 
+              réservations depuis
             </h2>
+
+            {/* <div className="absolute top-1/2 transform rounded-xl -translate-y-1/2  left-[100%] w-[150px] h-[85px] md:w-[300px] md:h-[170px] bg-gradient-to-r from-green-500 to-blue-500"> */}
+            {/* <div className="absolute top-1/2 left-[50%] transform -translate-x-1/2 -translate-y-1/2 rounded-xl bg-gradient-to-r from-green-500 to-blue-500 w-[150px] h-[85px] md:w-[300px] md:h-[170px]"> */}
             <div className="absolute top-1/2 transform rounded-xl -translate-y-1/2  left-[100%] w-[150px] h-[85px] md:w-[300px] md:h-[170px] bg-gradient-to-r from-green-500 to-blue-500">
-              <video
-                className="object-cover w-full h-full rounded-xl"
-                autoPlay
-                muted
-                loop
-                playsInline
-              >
-                <source src={video1} type="video/mp4" />
-                Your browser does not support the video
-              </video>
+            <img className="w-full h-[100%]" src={images.img4} alt="" />
             </div>
+
+            {/* </div> */}
           </div>
           <h2 className="text-3xl font-bold md:text-6xl lg:text-8xl font-fontAlt h2-3">
-          chez vous 
+            chez vous
           </h2>
         </div>
       </section>
