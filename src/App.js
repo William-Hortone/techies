@@ -12,7 +12,6 @@ const App = () => {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home  setShowMenu={setShowMenu} showMenu={showMenu} />} />
-          
         </Routes>
       </div>
     </>

@@ -1,123 +1,108 @@
-  html,body{
-    scroll-behavior: smooth;
-  }
-  
-  /* Text animation on scroll */
-  .app__desc-content{
-    color: black;
-  }
-  .content-text{
-    overflow: hidden;
-    line-height: 2;
-    
-  }
-  .content-text span{
-    display: inline-block;
-    transform: translateY(100%);
+html,
+body {
+  scroll-behavior: smooth;
+}
 
-  }
+/* Text animation on scroll */
+.app__desc-content {
+  color: black;
+}
+.content-text {
+  overflow: hidden;
+  line-height: 2;
+}
+.content-text span {
+  display: inline-block;
+  transform: translateY(100%);
+}
 
-  .content-seeMore {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .content-seeMore:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-  
+.content-seeMore {
+  transition: transform 0.3s ease-in-out;
+}
 
+.content-seeMore:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
 
-  .app__button {
-    position: relative;
-    padding:  1.2rem 1rem ;
-    height: 30px;
-    border-radius: 15px;
-    border: none;
-  }
-  .app__button-content{
-      position: relative;
-      padding:  1.2rem 1rem ;
-      height: 30px;
-      border-radius: 15px;
-      z-index: 2;
-      overflow: hidden ;
+.app__button {
+  position: relative;
+  padding: 1.2rem 1rem;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+}
+.app__button-content {
+  position: relative;
+  padding: 1.2rem 1rem;
+  height: 30px;
+  border-radius: 15px;
+  z-index: 2;
+  overflow: hidden;
+}
 
-  }
-  
-  .app__button  p:nth-of-type(1),
-  .app__button  p:nth-of-type(2){
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: top 0.25s ease-out;
-      font-family: var(--);
-      font-weight: 900;
-      text-transform: uppercase;
-      /* color: ; */
-  }
-  .app__button  p:nth-of-type(1){
-      top: 50%
-  }
-  .app__button  p:nth-of-type(2){
-      top: 130%;
-  }
-  .app__button:hover p:nth-of-type(1){
-      top: -70%;
-  }
-  .app__button:hover p:nth-of-type(2){
-      top: 50%;
-  }
-  
-  .icon-btn{
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      left: -10%;
-      top: 50%;
-      border-radius: 50%;
-      overflow: hidden;
-  
-      
-  }
-  .icon-content-two{
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      left: 107%;
-      top: 50%;
-      border-radius: 50%;
-      overflow: hidden;
-  
-      
-  }
-  .icon-arrow{
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%); 
-      transition: left  0.25s ease-out;
-  }
-  .icon-btn-one{
-      left: 50%;
-  
-     
-  }
-  .icon-btn-two{
-      left: -120%;
-  
-  }
-  .icon-btn-three{
-      left: -50%;
-  
-  }
-  .app__button:hover .icon-btn-one{
-      left: 150%;
-  }
-  .app__button:hover .icon-btn-two{
-      left: 50%;
-  }
-  .app__button:hover .icon-btn-three{
-      left: 50%;
-  }
+.app__button p:nth-of-type(1),
+.app__button p:nth-of-type(2) {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.25s ease-out;
+  font-family: var(--);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.app__button p:nth-of-type(1) {
+  top: 50%;
+}
+.app__button p:nth-of-type(2) {
+  top: 130%;
+}
+.app__button:hover p:nth-of-type(1) {
+  top: -70%;
+}
+.app__button:hover p:nth-of-type(2) {
+  top: 50%;
+}
 
-  
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.icon-content-two {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 107%;
+  top: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.icon-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.25s ease-out;
+}
+.icon-btn-one {
+  left: 50%;
+}
+.icon-btn-two {
+  left: -120%;
+}
+.icon-btn-three {
+  left: -50%;
+}
+.app__button:hover .icon-btn-one {
+  left: 150%;
+}
+.app__button:hover .icon-btn-two {
+  left: 50%;
+}
+.app__button:hover .icon-btn-three {
+  left: 50%;
+}

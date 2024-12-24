@@ -13,7 +13,7 @@ const Home = ({ setShowMenu, showMenu }) => {
       <Introduction setShowMenu={setShowMenu} showMenu={showMenu} />
       <footer className="w-full bg-black h-[200px] flex justify-center items-center">
         <h4 className="text-white uppercase ">
-          designed & Developed by{" "}
+          designed & Developed by
           <a className="font-bold text-basic" href="https://williamhortone.com">
             William Hortone
           </a>
